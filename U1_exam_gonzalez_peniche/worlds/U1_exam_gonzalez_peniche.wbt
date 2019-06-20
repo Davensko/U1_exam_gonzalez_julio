@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.07019450652973251 -0.9694382372564139 -0.2350792109018238 3.705136336438169
-  position 0.2211221142430242 2.382750133294822 -2.1191539244405777
+  position 0.8955005019876183 3.016502941410737 -3.1477055236076907
 }
 TexturedBackground {
 }
@@ -239,6 +239,46 @@ Solid {
                           Shape {
                             appearance USE Color_Red_
                             geometry USE Helice
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0 0.2 0
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry DEF Final_ Box {
+                              size 0.05 0.1 0.1
+                            }
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0 -0.2 0
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry USE Final_
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0.2 0 0
+                        rotation 0 0 1 1.5708
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry USE Final_
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation -0.2 0 0
+                        rotation 0 0 1 1.5708
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry USE Final_
                           }
                         ]
                       }
