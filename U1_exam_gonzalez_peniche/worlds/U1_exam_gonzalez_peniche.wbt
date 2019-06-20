@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.25149698681258054 -0.9643824127406861 -0.08195015326798007 5.631504105942886
-  position 2.425190921592232 1.4715153131149268 4.037811156084559
+  orientation 0.21604877672177938 -0.967853530565747 -0.1287729375623675 5.179224624270598
+  position 3.577782233387292 2.1741019576109406 1.5694906197738936
 }
 TexturedBackground {
 }
@@ -112,6 +112,26 @@ Solid {
             Shape {
               appearance USE Color_Blue
               geometry USE Support_
+            }
+          ]
+        }
+      ]
+    }
+    Group {
+      children [
+        Transform {
+          translation -0.4 1.3 0.4
+          children [
+            Shape {
+              appearance DEF Color_Red_ PBRAppearance {
+                baseColor 0.6431372549019608 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.6
+                radius 0.05
+              }
             }
           ]
         }
