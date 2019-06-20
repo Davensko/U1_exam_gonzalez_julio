@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.27587454286655666 -0.9363404670592848 -0.2171629948802716 4.885046577921247
-  position 1.0128545391141253 2.132745024076842 0.7503202895080406
+  orientation 0.07019450652973251 -0.9694382372564139 -0.2350792109018238 3.705136336438169
+  position 0.2211221142430242 2.382750133294822 -2.1191539244405777
 }
 TexturedBackground {
 }
@@ -135,10 +135,21 @@ Solid {
             }
           ]
         }
+        Transform {
+          translation -0.4 1.5 0.4
+          children [
+            Shape {
+              appearance USE Color_Red_
+              geometry Box {
+                size 0.1 0.1 0.2
+              }
+            }
+          ]
+        }
         HingeJoint {
           jointParameters HingeJointParameters {
             axis 0 1 0
-            anchor -0.4 1.5 0.45
+            anchor -0.4 1.5 0.5
             minStop -0.785398
             maxStop 0.785398
           }
@@ -172,6 +183,80 @@ Solid {
             physics Physics {
             }
           }
+        }
+      ]
+    }
+    Group {
+      children [
+        Transform {
+          translation -0.4 1.5 0.2
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 0 1
+                anchor 0 0 0.08
+              }
+              endPoint Solid {
+                translation 0 0 0.08
+                rotation 0 0 1 0
+                children [
+                  DEF Helices Group {
+                    children [
+                      Transform {
+                        translation 0 0.1 0
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry DEF Helice Box {
+                              size 0.04 0.2 0.04
+                            }
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0 -0.1 0
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry USE Helice
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0.1 0 0
+                        rotation 0 0 1 1.5708
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry USE Helice
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation -0.1 0 0
+                        rotation 0 0 1 1.5708
+                        children [
+                          Shape {
+                            appearance USE Color_Red_
+                            geometry USE Helice
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    rotation 0 0 1 0.785398
+                    children [
+                      USE Helices
+                    ]
+                  }
+                ]
+                name "solid(1)"
+                physics Physics {
+                }
+              }
+            }
+          ]
         }
       ]
     }
