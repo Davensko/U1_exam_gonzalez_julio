@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.8407614220102537 0.5271766099207987 0.12330877183603103 5.740498299005155
-  position -1.3991783412882894 2.970531567580731 5.267303156016971
+  orientation 0.25149698681258054 -0.9643824127406861 -0.08195015326798007 5.631504105942886
+  position 2.425190921592232 1.4715153131149268 4.037811156084559
 }
 TexturedBackground {
 }
@@ -88,6 +88,26 @@ Solid {
         Transform {
           translation -0.8 0.49 0.4
           rotation 1 0 0 1.5708
+          children [
+            Shape {
+              appearance USE Color_Blue
+              geometry USE Support_
+            }
+          ]
+        }
+        Transform {
+          translation -0.4 0.49 0
+          rotation 0 0 1 1.5708
+          children [
+            Shape {
+              appearance USE Color_Blue
+              geometry USE Support_
+            }
+          ]
+        }
+        Transform {
+          translation -0.4 0.49 0.8
+          rotation 0 0 1 1.5708
           children [
             Shape {
               appearance USE Color_Blue
