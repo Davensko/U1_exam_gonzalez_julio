@@ -2,12 +2,77 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.6931032800836722 0.6931032800836722 0.1980295085953349 0.75
-  position 3.0450717258368933 3.757034624791326 5.443646546510143
+  orientation 0.07373051646148052 -0.9949802780651146 -0.06766134201884155 4.79317039420136
+  position 3.514341684089186 1.204804219367613 0.21191323653577573
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
+}
+Solid {
+  children [
+    Group {
+      children [
+        Transform {
+          translation 0 0.49 0
+          rotation 0.7071067811865475 0 0.7071067811865475 0.349066
+          children [
+            Shape {
+              appearance DEF Color_Blue PBRAppearance {
+                baseColor 0.12549019607843137 0.2901960784313726 0.5294117647058824
+                roughness 1
+                metalness 0
+              }
+              geometry DEF Stick_ Box {
+                size 0.08 1 0.08
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.49 0.8
+          rotation 0.7071067811865475 0 -0.7071067811865475 -0.349066
+          children [
+            Shape {
+              appearance USE Color_Blue
+              geometry USE Stick_
+            }
+          ]
+        }
+        Transform {
+          translation -0.8 0.49 0
+          rotation 0.7071067811865475 0 -0.7071067811865475 0.349066
+          children [
+            Shape {
+              appearance USE Color_Blue
+              geometry USE Stick_
+            }
+          ]
+        }
+        Transform {
+          translation -0.8 0.49 0.8
+          rotation -0.7071067811865475 0 -0.7071067811865475 0.349066
+          children [
+            Shape {
+              appearance USE Color_Blue
+              geometry USE Stick_
+            }
+          ]
+        }
+        Transform {
+          translation -0.4 1 0.4
+          children [
+            Shape {
+              appearance USE Color_Blue
+              geometry Box {
+                size 0.8 0.05 0.8
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
